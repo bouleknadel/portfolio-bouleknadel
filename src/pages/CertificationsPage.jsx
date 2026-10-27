@@ -46,6 +46,9 @@ function CertificationsContent() {
                     {page.expires} {formatMonth(c.expires, lang)}
                   </span>
                 )}
+                {c.description && (
+                  <span className="mt-1.5 block max-w-2xl text-xs leading-relaxed text-slate-400">{c.description}</span>
+                )}
               </span>
             </span>
             <span className="hidden text-sm text-slate-400 md:block">{c.issuer}</span>

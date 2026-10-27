@@ -3,11 +3,11 @@
 
 import {
   SiAngular, SiApachekafka, SiApachespark, SiDocker, SiDotnet, SiFastapi, SiFlutter, SiGitlab,
-  SiGooglegemini, SiJavascript, SiLangchain, SiLanggraph, SiLaravel, SiModelcontextprotocol,
+  SiGooglegemini, SiHuggingface, SiJavascript, SiLangchain, SiLanggraph, SiLaravel, SiModelcontextprotocol,
   SiMongodb, SiMysql, SiN8N, SiNeo4J, SiNextdotjs, SiNodedotjs, SiPostgresql, SiPython,
   SiPytorch, SiReact, SiSpringboot, SiTensorflow, SiTypescript,
 } from "react-icons/si";
-import { FaAws, FaJava } from "react-icons/fa";
+import { FaAws, FaJava, FaLinkedin } from "react-icons/fa";
 import { GrOracle } from "react-icons/gr";
 import { RiOpenaiFill } from "react-icons/ri";
 
@@ -43,15 +43,42 @@ export const issuers = {
   Oracle: { icons: [GrOracle], bg: "#C74634", fg: "#fff" },
   OpenClassrooms: { short: "OC", bg: "#7451EB", fg: "#fff" },
   "MOOC Gestion de Projet": { short: "GdP", bg: "#0e7490", fg: "#ecfeff" },
+  "LinkedIn Learning": { icons: [FaLinkedin], bg: "#0A66C2", fg: "#fff" },
+  "Hugging Face": { icons: [SiHuggingface], bg: "#FFD21E", fg: "#1a1200" },
 };
 
 // Official certificate titles are kept verbatim (not translated).
 // `featured` ones appear on the home page; the full list lives on /certifications/.
+// `description` is optional ({ en, fr }) and shown on /certifications/.
 const certificationList = [
-  { name: "AWS Academy Graduate – AWS Academy Cloud Architecting", issuer: "AWS", date: "2025-05", featured: 1, url: "https://www.credly.com/badges/7a37df0d-7ccf-49f4-af92-f72c0228233b/public_url" },
-  { name: "Oracle Certified Professional: Java SE 17 Developer", issuer: "Oracle", date: "2025-02", featured: 2, url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=D675A20962294321CC9DE67F611CF18DF65818FDC51608E2B1FD3680E8EA6264" },
-  { name: "Oracle Cloud Infrastructure 2024 Certified DevOps Professional", issuer: "Oracle", date: "2025-02", expires: "2027-02", featured: 3, url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=9213871BD700BA5173BBC3FC946DBD0D0CC771DF07B9F91D851B4C6B22CA42E7" },
-  { name: "Spécialisation Gestion de projet agile avec Scrum", issuer: "MOOC Gestion de Projet", date: "2025-12", featured: 4, url: "https://moocgdp.gestiondeprojet.pm/certificates/e22ee79d1aff4ea09c5e092f055712fe" },
+  {
+    name: "Hugging Face Agents Course — Certificate of Excellence", issuer: "Hugging Face", date: "2026-10", featured: 1,
+    url: "https://www.linkedin.com/in/abderrahmane-bouleknadel-55700b25b/overlay/Certifications/2038855075/treasury/?profileId=ACoAAD_lPVMBB0jQd2VQyr39fQRNVOOkKFC2OxM",
+    description: {
+      en: "Designed and deployed an autonomous AI agent able to reason, plan and use tools, validated on the GAIA benchmark.",
+      fr: "Conception et déploiement d'un agent IA autonome capable de raisonner, planifier et utiliser des outils, validé sur le benchmark GAIA.",
+    },
+  },
+  {
+    name: "Generative AI: From Prompts to Partnership", issuer: "LinkedIn Learning", date: "2026-10", featured: 2,
+    url: "https://www.linkedin.com/learning/certificates/64f75a4a357dab44da1c8262ff239d60b276b10624c0b8f7ee1bbbb5d21d3467",
+    description: {
+      en: "Writing effective prompts, how generative AI works, collaborating with AI day to day, integrating AI assistants into working methods.",
+      fr: "Rédaction de prompts efficaces, fonctionnement de l'IA générative, collaboration avec l'IA au quotidien, intégration d'assistants IA dans les méthodes de travail.",
+    },
+  },
+  {
+    name: "AI Agents Fundamentals", issuer: "Hugging Face", date: "2026-10",
+    url: "https://www.linkedin.com/in/abderrahmane-bouleknadel-55700b25b/overlay/Certifications/2036161801/treasury/?profileId=ACoAAD_lPVMBB0jQd2VQyr39fQRNVOOkKFC2OxM",
+    description: {
+      en: "Fundamentals of AI agents and LLMs.",
+      fr: "Fondamentaux des agents IA et des LLM.",
+    },
+  },
+  { name: "AWS Academy Graduate – AWS Academy Cloud Architecting", issuer: "AWS", date: "2025-05", featured: 3, url: "https://www.credly.com/badges/7a37df0d-7ccf-49f4-af92-f72c0228233b/public_url" },
+  { name: "Oracle Certified Professional: Java SE 17 Developer", issuer: "Oracle", date: "2025-02", featured: 4, url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=D675A20962294321CC9DE67F611CF18DF65818FDC51608E2B1FD3680E8EA6264" },
+  { name: "Oracle Cloud Infrastructure 2024 Certified DevOps Professional", issuer: "Oracle", date: "2025-02", expires: "2027-02", featured: 5, url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=9213871BD700BA5173BBC3FC946DBD0D0CC771DF07B9F91D851B4C6B22CA42E7" },
+  { name: "Spécialisation Gestion de projet agile avec Scrum", issuer: "MOOC Gestion de Projet", date: "2025-12", featured: 6, url: "https://moocgdp.gestiondeprojet.pm/certificates/e22ee79d1aff4ea09c5e092f055712fe" },
   { name: "Spécialisation Introduction aux principaux outils de TRIZ", issuer: "MOOC Gestion de Projet", date: "2025-12", url: "https://moocgdp.gestiondeprojet.pm/certificates/8b7b5329f71b43f1ba8315bd6fdef8e3" },
   { name: "Attestation session 26 — Parcours Classique", issuer: "MOOC Gestion de Projet", date: "2025-12", url: "https://certification.gestiondeprojet.pm/GdP26AP/GdP26PC-BoRVnIexA.pdf" },
   { name: "AWS Academy Graduate – AWS Academy Cloud Developing", issuer: "AWS", date: "2025-04", url: "https://www.credly.com/badges/a17d613b-5fa3-4a81-97b8-c598aac5db42/public_url" },
@@ -120,7 +147,7 @@ const skillItems = {
 // To add a project: append an entry here + its prose in `en.projects` / `fr.projects`.
 // `repo` is null when the code is private or not public yet.
 const projectMeta = [
-  { key: "construction", title: "AI Construction Assistant", year: "2026", featured: true, repo: null, stack: ["LangChain", "LangGraph", "FastAPI", "ChromaDB", "Groq", "OpenAI / Gemini", "LangSmith", "n8n"] },
+  { key: "construction", title: "AI Construction Assistant", year: "2026", featured: true, repo: "https://github.com/bouleknadel/rag-btp-assistant", stack: ["Python", "LangChain", "LangGraph", "ChromaDB", "FastAPI", "LangSmith", "n8n", "Groq", "Gemini", "OpenAI", "Reranking"] },
   { key: "devpilot", title: "DevPilot", year: "2026", featured: true, repo: null, stack: ["Python", "LangGraph", "MCP", "Docker", "GitHub API"] },
   { key: "enviscan", title: "EnviScan+", year: null, featured: true, repo: "https://github.com/bouleknadel/EnviScanPlus", stack: ["Android", "TensorFlow Lite", "ARCore", "Spring Boot", "Spring AI"] },
   { key: "reskif", title: "Reskif", year: "2026", featured: true, repo: null, stack: ["Matrix / Synapse", "Docker", "Caddy", "PostgreSQL", "React"] },
@@ -262,11 +289,13 @@ const en = {
       problem: "Construction field teams spent up to 4 hours digging through 400+ technical documents to find a single piece of information.",
       role: "Generative AI / backend intern — I designed and shipped the RAG pipeline and its FastAPI service end to end.",
       decisions: [
-        "Ingestion → embeddings → ChromaDB index, with a reranking step so only the most relevant chunks reach the LLM.",
-        "LangGraph to orchestrate retrieval and generation; Groq or OpenAI/Gemini behind the same interface.",
-        "Iterative prompt engineering, n8n workflows to harden the chain, LangSmith to trace and evaluate it.",
+        "Ingestion and ChromaDB indexing pipeline over a corpus of 400+ documents (reports, technical specifications (CCTP), meeting minutes, data sheets).",
+        "Two-stage retrieval with cross-encoder reranking, so only the most relevant chunks reach the LLM.",
+        "Corrective RAG graph in LangGraph: relevance grading, automatic query rewriting, and anti-hallucination refusal when the corpus has no answer.",
+        "Multi-LLM architecture (Groq, Gemini, OpenAI) with automatic failover behind the same interface.",
+        "FastAPI report-synthesis API, ingestion automated with n8n, evaluation and monitoring with LangSmith; 102 tests and GitHub Actions CI.",
       ],
-      result: "Lookup time cut from 4 h to 20 min · >85% of answers rated relevant by business teams.",
+      result: "93.5% answer relevance · 100% correct refusals on out-of-corpus questions · lookup time cut from 4 h to 20 min.",
     },
     devpilot: {
       tag: "AI Agent",
@@ -548,11 +577,13 @@ const fr = {
       problem: "Les équipes terrain du BTP passaient jusqu'à 4 heures à fouiller plus de 400 documents techniques pour retrouver une information.",
       role: "Stagiaire IA générative / backend — j'ai conçu et mis en production le pipeline RAG et son service FastAPI de bout en bout.",
       decisions: [
-        "Ingestion → embeddings → index ChromaDB, avec une étape de reranking pour n'envoyer au LLM que les passages les plus pertinents.",
-        "LangGraph pour orchestrer recherche et génération ; Groq ou OpenAI/Gemini derrière la même interface.",
-        "Prompt engineering itératif, workflows n8n pour fiabiliser la chaîne, LangSmith pour la tracer et l'évaluer.",
+        "Pipeline d'ingestion et d'indexation ChromaDB sur un corpus de plus de 400 documents (rapports, CCTP, PV, fiches techniques).",
+        "Recherche en deux temps avec reranking cross-encoder, pour n'envoyer au LLM que les passages les plus pertinents.",
+        "Graphe RAG correctif LangGraph : tri de pertinence, reformulation automatique, refus anti-hallucination quand le corpus ne contient pas la réponse.",
+        "Architecture multi-LLM (Groq, Gemini, OpenAI) avec bascule automatique derrière la même interface.",
+        "API FastAPI de synthèse de rapports, automatisation d'ingestion avec n8n, évaluation et monitoring LangSmith ; 102 tests et CI GitHub Actions.",
       ],
-      result: "Temps de recherche réduit de 4 h à 20 min · plus de 85 % de réponses jugées pertinentes par le métier.",
+      result: "93,5 % de pertinence · 100 % de refus corrects hors corpus · temps de recherche réduit de 4 h à 20 min.",
     },
     devpilot: {
       tag: "Agent IA",
@@ -714,7 +745,9 @@ function build(t) {
     ...t.projects[p.key],
     title: typeof p.title === "string" ? p.title : p.title[t.lang],
   }));
-  const certifications = [...certificationList].sort((a, b) => b.date.localeCompare(a.date));
+  const certifications = certificationList
+    .map((c) => ({ ...c, description: c.description?.[t.lang] }))
+    .sort((a, b) => b.date.localeCompare(a.date));
   return {
     ...t,
     profile: { ...contactInfo, ...t.profile },
